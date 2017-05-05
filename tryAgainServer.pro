@@ -29,12 +29,16 @@ SOURCES += main.cpp\
     server.cpp \
     multhreadserver.cpp \
     socket.cpp \
-    thread.cpp
+    thread.cpp \
+    mulserver.cpp \
+    myresponse.cpp
 
 HEADERS  += mainwindow.h \
     server.h \
     multhreadserver.h \
     socket.h \
-    thread.h
+    thread.h \
+    mulserver.h \
+    myresponse.h
 
 FORMS    += mainwindow.ui

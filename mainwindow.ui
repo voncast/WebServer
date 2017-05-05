@@ -10,6 +10,12 @@
     <height>512</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <underline>false</underline>
+    <strikeout>false</strikeout>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -17,8 +23,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>90</y>
+      <x>-10</x>
+      <y>120</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -35,9 +41,9 @@
    <widget class="QLineEdit" name="port">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>180</y>
-      <width>171</width>
+      <x>50</x>
+      <y>190</y>
+      <width>141</width>
       <height>41</height>
      </rect>
     </property>
@@ -51,9 +57,9 @@
    <widget class="QLineEdit" name="index">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>280</y>
-      <width>171</width>
+      <x>50</x>
+      <y>270</y>
+      <width>141</width>
       <height>41</height>
      </rect>
     </property>
@@ -67,7 +73,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>10</x>
       <y>280</y>
       <width>111</width>
       <height>31</height>
@@ -85,9 +91,9 @@
    <widget class="QLineEdit" name="ip">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>80</y>
-      <width>171</width>
+      <x>50</x>
+      <y>110</y>
+      <width>141</width>
       <height>41</height>
      </rect>
     </property>
@@ -101,8 +107,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>180</y>
+      <x>10</x>
+      <y>200</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -116,30 +122,106 @@
      <string>端口</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="on">
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>-10</y>
+      <width>20</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="clientTable">
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>360</y>
-      <width>104</width>
-      <height>33</height>
+      <y>70</y>
+      <width>521</width>
+      <height>361</height>
      </rect>
     </property>
-    <property name="text">
-     <string>on</string>
+    <property name="columnCount">
+     <number>4</number>
     </property>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
    </widget>
-   <widget class="QPushButton" name="off">
+   <widget class="QToolButton" name="toggle">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>0</x>
       <y>360</y>
-      <width>104</width>
-      <height>33</height>
+      <width>191</width>
+      <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>19</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>off</string>
+     <string>Start Server</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="status">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>Server is out of service...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>On Your Call ,AnyTime •̀.̫•́✧</string>
     </property>
    </widget>
   </widget>
@@ -149,7 +231,7 @@
      <x>0</x>
      <y>0</y>
      <width>715</width>
-     <height>30</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
@@ -161,7 +243,6 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

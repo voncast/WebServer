@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "multhreadserver.h"
+#include "mulserver.h"
+#include <QHash>
+#include <QTableWidget>
+#include <QHeaderView>
 namespace Ui {
 class MainWindow;
 }
@@ -15,12 +19,22 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    mulThreadServer *ser;
+    mulServer *ser;
+    QHash<qintptr,int>rowMap;
 private slots:
     void on_on_clicked();
 
     void on_off_clicked();
 
+    void statusChanged();
+
+    void listenStatus(bool);
+
+    void connectStatus(bool);
+
+    void reqInfo(QString,int);
+
+    void resStatus(bool,QString,int);
 private:
     Ui::MainWindow *ui;
 };

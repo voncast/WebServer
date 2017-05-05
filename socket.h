@@ -1,24 +1,29 @@
 #ifndef SOCKET_H
 #define SOCKET_H
 
-#include <QtNetwork>
+//#include "request.h"
+#include <QtNetwork/QtNetwork>
+#include <QPixmap>
+#include <QBuffer>
+#include "myresponse.h"
 class socket : public QTcpSocket
 {
     Q_OBJECT
 public:
     int port;
     QString srcDir;
+    QString index;
     QString in;
-    explicit socket(qintptr sid,QObject *parent = 0);
+    void sendTo();
+    explicit socket(qintptr sid,QString,int,QObject *parent = 0);
     virtual ~socket() {}
 signals:
-    void sendClose(qintptr);
-    void sendRead(qintptr);
-    void sendByte(qint64);
+    void closeSocket();
+    void sendReq(QString,int);
+    void sendResStatus(bool,QString,int);
 public slots:
-    void sendCloseMessage();
-    void sendReadMessage();
-    void sendByteMessage(qint64);
+    void sendCloseSocket();
+    void rcv();
 private:
     qintptr id;
 };
