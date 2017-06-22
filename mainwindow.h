@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "multhreadserver.h"
 #include "mulserver.h"
 #include <QHash>
 #include <QTableWidget>

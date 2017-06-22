@@ -84,8 +84,8 @@ void socket::sendTo(){
     {
         //打不开则返回404
        qDebug() << "Open failed." << endl;
-       QString rdir=QCoreApplication::applicationDirPath();
-       rdir+="/src/404.html";
+//       QString rdir=QCoreApplication::applicationDirPath();
+       QString rdir=index+"/404.html";
        qDebug()<<rdir;
        QFile fr(rdir);
        fr.open(QIODevice::ReadOnly | QIODevice::Text);

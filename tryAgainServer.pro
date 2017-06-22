@@ -26,16 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    server.cpp \
-    multhreadserver.cpp \
     socket.cpp \
     thread.cpp \
     mulserver.cpp \
     myresponse.cpp
 
 HEADERS  += mainwindow.h \
-    server.h \
-    multhreadserver.h \
     socket.h \
     thread.h \
     mulserver.h \
